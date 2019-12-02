@@ -142,7 +142,7 @@ void RegisterSymbolizer(bool (*fn)(const void *pc, char *out, int out_size)) {
 // spinlock delay on iteration c.  Returns new c.
 namespace {
   enum DelayMode { AGGRESSIVE, GENTLE };
-};
+}  // namespace
 static int Delay(int32_t c, DelayMode mode) {
   // If this a uniprocessor, only yield/sleep.  Otherwise, if the mode is
   // aggressive then spin many times before yielding.  If the mode is
